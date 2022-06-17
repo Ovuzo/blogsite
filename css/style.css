@@ -1,0 +1,78 @@
+.bg-primary, .btn-primary{
+    background: rgb(140, 213, 249)!important;
+}
+.btn-outline-primary{
+    border:solid rgb(140, 213, 249)!important;
+    color:rgb(140, 213, 249) ;
+}
+.post{
+    background: rgb(230, 243, 249) ;
+}
+.first{
+    width: 100%;
+    height: 100vh;
+}
+.second{
+    width: 90%;
+    height: 100vh;
+    position: absolute;
+    top: 55;
+    margin-left: 10%;
+}
+.post{
+    width: 65%;
+}
+.swiper-wrapper{
+    height: 100px;
+}
+.swiper {
+    width: 100%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height: 100% !important;
+    background: url("../images/afridish-1.jpg") no-repeat center center/cover;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .dish-2{
+    background: url("../images/afridish-2.jfif")no-repeat center center/cover;
+  }
+  .dish-3{
+    background: url("../images/afridish-3.jpg")no-repeat center center/cover;
+  }
+  .dish-4{
+    background: url("../images/afridish-4.jpg")no-repeat center center/cover;
+  }
+  .dish-5{
+    background: url("../images/afridish-5.jpg")no-repeat center center/cover;
+  }
+  .dish-6{
+    background: url("../images/afridish-6.jpg")no-repeat center center/cover;
+  }
+  .dish-6{
+    background: url("../images/afridish-3.jpg")no-repeat center center/cover;
+  }
+  .dish-6{
+    background: url("../images/afridish-5.jpg")no-repeat center center/cover;
+  }
+  .dish-6{
+    background: url("../images/afridish-2.jfif")no-repeat center center/cover;
+  }
