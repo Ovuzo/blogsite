@@ -10,3 +10,12 @@
     })
   })
 </script>
+
+document.getElementById("getText").addEventListener
+('click', getText);
+
+function getText() {
+  fetch('update.txt')
+  .then((res) => res.text())
+  .then((data) => console.log(data)) 
+}

@@ -67,5 +67,19 @@
         </div>
       </div>
     </section>
+    <button>Update</button>
+
+
+    <script>
+      document.getElementById("update").addEventListener
+('click', update);
+
+function update() {
+  fetch('update.txt')
+  .then((res) => res.text())
+  .then((data) => console.log(data)) 
+}
+let postId = new URLSearchParams(window.location.search).get('id');
+    </script>
 </body>
 </html>

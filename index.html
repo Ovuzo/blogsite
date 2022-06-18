@@ -75,11 +75,22 @@
                 </div>
             </div>
             <div class="action ms-3 mb-5">
-                <button class="btn btn-primary border-0 d-block  px-4">Post</button>
-                <a href="test.html"><button class="btn-outline-primary d-block px-4 my-5">View</button></a>
+                <button id="getText" class="btn btn-primary border-0 d-block  px-4">Update</button>
+                <a href="test.html?id=${post.id}"><button class="btn-outline-primary d-block px-4 my-5">View</button></a>
                 <button class="btn-danger border-0 d-block px-3 ">Delect</button>
             </div>
         </div>
+
+        <div id="output"></div>
+        <form id="addPost">
+          <div>
+            <input type="text" id="title" placeholder="Title">
+          </div>
+          <div>
+            <textarea id="body" placeholder="Body"></textarea>
+          </div>
+          <input type="submit" value="Post">
+        </form>
 
         <div class="main my-5 d-flex">
           <div class="post d-flex bg-primary border-2">
@@ -97,7 +108,7 @@
           </div>
           <div class="action ms-3 mb-5">
               <button class="btn btn-primary border-0 d-block  px-4">Post</button>
-              <a href="test.html"><button class="btn-outline-primary d-block px-4 my-5">View</button></a>
+              <a href="test.html?id=${post.id}"><button class="btn-outline-primary d-block px-4 my-5">View</button></a>
               <button class="btn-danger border-0 d-block px-3 ">Delect</button>
           </div>
       </div>
@@ -118,7 +129,7 @@
         </div>
         <div class="action ms-3 mb-5">
             <button class="btn btn-primary border-0 d-block  px-4">Post</button>
-            <a href="test.html"><button class="btn-outline-primary d-block px-4 my-5">View</button></a>
+            <a href="test.html?id=${post.id}"><button class="btn-outline-primary d-block px-4 my-5">View</button></a>
             <button class="btn-danger border-0 d-block px-3 ">Delect</button>
         </div>
     </div>
@@ -157,11 +168,42 @@
         });
       </script>
     <script src="./js/bootstrap.min.js"></script>
-    
-    
+    <script>
+           document.getElementById("getText").addEventListener
+          ('click', getText);
+          document.getElementById("addPost").addEventListener
+          ('submit', addPost)
+
+          function getText() {
+            fetch('update.txt')
+            .then((res) => res.text())
+            .then((data) => console.log(data)) 
+          }
+
+          function addPost(e){
+            e.preventDefault();
+
+            let title = document.getElementById('title').value;
+            let body = document.getElementById('body').value;
+
+            fetch('https://jsonplaceholder.typicode.com/posts',{
+              method:'POST',
+              headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'content-type':'application/json'
+              },
+              body:JSON.Stringify({title:title, body:body})
+            })
+            .then((res) => res.json())
+            .then((data) => console.log(data))
+          }
+
+          let postId = new URLSearchParams(window.location.search).get('id');
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
+
+<!-- <script>
   var form = document.getElementById('form')
 
   form.addEventListener('submit', function(e){
@@ -172,5 +214,6 @@
       console.log(data)
     })
   })
-</script>
+</script> -->
+
 </html>
