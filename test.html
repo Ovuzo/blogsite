@@ -3,50 +3,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <section class="py-5 bg-primary">
-        <form id="contact-form" class="form">
-          <div class="mb-3">
-            <input type="text"id="title" placeholder="Title">
+    <section class="container mt-5">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="./images/afridish-2.jfif" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Name of dish</h5>
+              <p class="card-text">Ingredience 1</p>
+              <p class="card-text">Ingredience 2</p>
+              <p class="card-text">Ingredience 3</p>
+              <p class="card-text">Ingredience 4</p>
+              <p class="card-text">Ingredience 5</p>
+            </div>
+            <a href="#">
+              <div class="card-footer btn-primary justify-center">
+                <small>CLICK FOR RECIPE</small>
+              </div>
+            </a>
           </div>
-          <div class="mb-3">
-            <textarea id="body" placeholder="body"></textarea>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="./images/afridish-5.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Name of dish</h5>
+              <p class="card-text">Ingredience 1</p>
+              <p class="card-text">Ingredience 2</p>
+              <p class="card-text">Ingredience 3</p>
+              <p class="card-text">Ingredience 4</p>
+              <p class="card-text">Ingredience 5</p>
+            </div>
+            <a href="#">
+              <div class="card-footer btn-primary justify-center">
+                <small>CLICK FOR RECIPE</small>
+              </div>
+            </a>
           </div>
-          <div class="">
-            <button class="btn" type="submit">create post</button>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="./images/afridish-2.jfif" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <div class="card-body">
+                <h5 class="card-title">Name of dish</h5>
+                <p class="card-text">Ingredience 1</p>
+                <p class="card-text">Ingredience 2</p>
+                <p class="card-text">Ingredience 3</p>
+                <p class="card-text">Ingredience 4</p>
+                <p class="card-text">Ingredience 5</p>
+              </div>
+            <a href="#">
+              <div class="card-footer btn-primary justify-center">
+                <small>CLICK FOR RECIPE</small>
+              </div>
+            </a>
           </div>
-        </form>
-      </section>
-    <section>
-        <form id="contact-form" class="form" action="https://reqbin.com/echo/post/form">
-          <div class="mb-3">
-            <label for=" formControlInput" class="form-label"></label>
-            <input type="text" class="form-control" id="title" placeholder="Title">
-          </div>
-          <div class="mb-3">
-            <label for=" formControlInput" class="form-label"></label>
-            <textarea class="form-control1" id="body" placeholder="body"></textarea>
-          </div>
-          <div class="">
-            <button class="btn" type="submit">create post</button>
-          </div>
-        </form>
-      </section>
-      <script src="./js/bootstrap.min.js"></script>
+        </div>
+      </div>
+    </section>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
-  var form = document.getElementById('form')
-
-  form.addEventListener('submit', function(e){
-    e.preventDefault()
-    var title = document.getElementById('title').value
-    var body =  document.getElementById('body').body
-    $.post('https://jsonplaceholder.typicode.com/posts', {title:title,body:body}, function(data){
-      console.log(data)
-    })
-  })
-</script>
 </html>
