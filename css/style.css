@@ -15,14 +15,18 @@ a{
 #post-form{
   background: blue;
 }
-input{
+.form-sec{
+  width: 60%;
+  
+}
+/* input{
   width: 50%;
   height:40px;
 }
 textarea{
   width: 50%;
   height: 100px;
-}
+} */
 .post .img{
   width: 100%;
   height: 100%;
