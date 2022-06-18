@@ -40,6 +40,7 @@ textarea{
 .logo{
   height: 80px;
   width: 80px;
+  background: url("../images/r-logo.png")no-repeat center center/cover;
 }
 /* .second{
     width: 90%;
