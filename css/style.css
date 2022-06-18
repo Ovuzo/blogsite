@@ -11,6 +11,7 @@
 }
 a{
   text-decoration: none;
+  color: rgb(19, 19, 21);
 }
 #post-form{
   background: blue;
@@ -36,12 +37,16 @@ textarea{
     width: 100%;
     height: 100vh;
 }
-.second{
+.logo{
+  height: 80px;
+  width: 80px;
+}
+/* .second{
     width: 90%;
-    position: absolute;
+    position: relative;
     top: 55;
     margin-left: 10%;
-}
+} */
 
 .swiper-wrapper{
     height: 100px;
