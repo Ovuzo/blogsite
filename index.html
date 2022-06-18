@@ -45,43 +45,93 @@
     </section>
 
     <section class="second bg-light p-5 ">
-        <div class="main d-flex">
-            <div class="post p-5 border-">
-                <p>
+      <div class="swiper mySwiper my-5">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide bg-success">Slide 1</div>
+          <div class="swiper-slide dish-2"></div>
+          <div class="swiper-slide dish-3"></div>
+          <div class="swiper-slide dish-4"></div>
+          <div class="swiper-slide dish-5"></div>
+          <div class="swiper-slide dish-6"></div>
+          <div class="swiper-slide dish-7"></div>
+          <div class="swiper-slide dish-8"></div>
+          <div class="swiper-slide dish-9"></div>
+        </div>
+        <div class="swiper-pagination mt-5"></div>
+      </div>
 
-                </p>
+        <div class="main my-5 d-flex">
+            <div class="post d-flex bg-primary border-2">
+                <div class="img"></div>
+                <div class="card-txt">
+                  <div class="container p-3">
+                    <h4 class="text-center">First post</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae nam ea
+                       deleniti illo vero? Aliquid hic libero minus corporis nihil?
+                       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae nam ea
+                       deleniti illo vero? Aliquid hic libero minus corporis nihil?
+                      </p>
+                  </div> 
+                </div>
             </div>
             <div class="action ms-3 mb-5">
                 <button class="btn btn-primary border-0 d-block  px-4">Post</button>
-                <button class="btn-outline-primary d-block px-4 my-5">View</button>
+                <a href="test.html"><button class="btn-outline-primary d-block px-4 my-5">View</button></a>
                 <button class="btn-danger border-0 d-block px-3 ">Delect</button>
             </div>
         </div>
 
-        <div class="swiper mySwiper my-5">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide bg-success">Slide 1</div>
-              <div class="swiper-slide dish-2"></div>
-              <div class="swiper-slide dish-3"></div>
-              <div class="swiper-slide dish-4"></div>
-              <div class="swiper-slide dish-5"></div>
-              <div class="swiper-slide dish-6"></div>
-              <div class="swiper-slide dish-7"></div>
-              <div class="swiper-slide dish-8"></div>
-              <div class="swiper-slide dish-9"></div>
-            </div>
-            <div class="swiper-pagination mt-5"></div>
+        <div class="main my-5 d-flex">
+          <div class="post d-flex bg-primary border-2">
+              <div class="img"></div>
+              <div class="card-txt">
+                <div class="container p-3">
+                  <h4 class="text-center">First post</h4>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae nam ea
+                     deleniti illo vero? Aliquid hic libero minus corporis nihil?
+                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae nam ea
+                     deleniti illo vero? Aliquid hic libero minus corporis nihil?
+                    </p>
+                </div> 
+              </div>
           </div>
+          <div class="action ms-3 mb-5">
+              <button class="btn btn-primary border-0 d-block  px-4">Post</button>
+              <a href="test.html"><button class="btn-outline-primary d-block px-4 my-5">View</button></a>
+              <button class="btn-danger border-0 d-block px-3 ">Delect</button>
+          </div>
+      </div>
+
+      <div class="main my-5 d-flex">
+        <div class="post d-flex bg-primary border-2">
+            <div class="img"></div>
+            <div class="card-txt">
+              <div class="container p-3">
+                <h4 class="text-center">First post</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae nam ea
+                   deleniti illo vero? Aliquid hic libero minus corporis nihil?
+                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae nam ea
+                   deleniti illo vero? Aliquid hic libero minus corporis nihil?
+                  </p>
+              </div> 
+            </div>
+        </div>
+        <div class="action ms-3 mb-5">
+            <button class="btn btn-primary border-0 d-block  px-4">Post</button>
+            <a href="test.html"><button class="btn-outline-primary d-block px-4 my-5">View</button></a>
+            <button class="btn-danger border-0 d-block px-3 ">Delect</button>
+        </div>
+    </div>
+
+        
     </section>
-    <section>
-      <form id="contact-form" action="https://reqbin.com/echo/post/form">
+    <section class="py-5 bg-primary">
+      <form id="contact-form" class="form">
         <div class="mb-3">
-          <label for=" formControlInput" class="form-label"></label>
-          <input type="text" class="form-control" id="title" placeholder="Title">
+          <input type="text"id="title" placeholder="Title">
         </div>
         <div class="mb-3">
-          <label for=" formControlInput" class="form-label"></label>
-          <textarea class="form-control" id="title" placeholder="Title"></textarea>
+          <textarea id="body" placeholder="body"></textarea>
         </div>
         <div class="">
           <button class="btn" type="submit">create post</button>
@@ -110,4 +160,17 @@
     
     
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+  var form = document.getElementById('form')
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault()
+    var title = document.getElementById('title').value
+    var body =  document.getElementById('body').body
+    $.post('https://jsonplaceholder.typicode.com/posts', {title:title,body:body}, function(data){
+      console.log(data)
+    })
+  })
+</script>
 </html>
