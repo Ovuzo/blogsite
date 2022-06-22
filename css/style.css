@@ -45,12 +45,11 @@ textarea{
   width: 80px;
   background: url("../images/r-logo.png")no-repeat center center/cover;
 }
-.second{
-    width: 90%;
-    position: relative;
-    top: 55;
-    margin-left: 10%;
-} 
+.pix1{
+  width: 100%;
+  height: 40%;
+  background: url("../images/afridish-3.jpg")no-repeat center center/cover;
+}
 
 .swiper-wrapper{
     height: 100px;
