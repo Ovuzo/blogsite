@@ -8,6 +8,9 @@
     <title>Document</title>
 </head>
 <body>
+
+
+  <a href="index.html"><button class="btn btn-primary">Back home</button></a>
     <section class="container mt-5">
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
@@ -59,7 +62,7 @@
                 <p class="card-text">Ingredience 5</p>
               </div>
             <a href="#">
-              <div class="card-footer btn-primary justify-center">
+              <div class="card-footer btn-primary text-center justify-center">
                 <small>CLICK FOR RECIPE</small>
               </div>
             </a>
@@ -67,12 +70,12 @@
         </div>
       </div>
     </section>
-    <button>Update</button>
+    
 
 
     <script>
       document.getElementById("update").addEventListener
-('click', update);
+      ('click', update);
 
 function update() {
   fetch('update.txt')

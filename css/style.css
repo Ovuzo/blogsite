@@ -1,33 +1,30 @@
 .bg-primary, .btn-primary{
-    background: rgb(140, 213, 249)!important;
+    background: rgb(1, 57, 85)!important;
 }
 .btn-outline-primary{
-    border:solid rgb(140, 213, 249)!important;
-    color:rgb(140, 213, 249) ;
+    border: rgb(1, 57, 85)!important;
+   color: rgb(1, 57, 85)!important;
 }
-.post{
-    width: 80%;
-    height: 40vh; 
+.text-primary{
+  color:rgb(1, 57, 85)!important;
 }
 a{
   text-decoration: none;
   color: rgb(19, 19, 21);
 }
-#post-form{
-  background: blue;
-}
+
 .form-sec{
   width: 60%;
   
-}
-/* input{
+} 
+ input{
   width: 50%;
   height:40px;
 }
 textarea{
   width: 50%;
   height: 100px;
-} */
+} 
 .post .img{
   width: 100%;
   height: 100%;
@@ -36,27 +33,32 @@ textarea{
 .first{
     width: 100%;
     height: 100vh;
-}
+} 
+
 .logo{
   height: 80px;
   width: 80px;
   background: url("../images/r-logo.png")no-repeat center center/cover;
 }
-/* .second{
+.logo2{
+  height: 80px;
+  width: 80px;
+  background: url("../images/r-logo.png")no-repeat center center/cover;
+}
+.second{
     width: 90%;
     position: relative;
     top: 55;
     margin-left: 10%;
-} */
+} 
 
 .swiper-wrapper{
     height: 100px;
 }
 .swiper {
     width: 100%;
-    height: 250px;
-    margin-left: auto;
-    margin-right: auto;
+    height: 300px;
+    background: url("../images/food.jpg")no-repeat center center/cover;
   }
 
   .swiper-slide {
