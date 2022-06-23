@@ -174,9 +174,9 @@ function renderPosts(arr) {
             </p>
         </div>
         <div class=" d-flex justify-content-between">
-          <button class="btn btn-primary px-4" onclick="viewSinglePost(id)">${post.id}</button>
-          <button class="btn btn-outline-success " onclick="updateSinglePost()">${post.id}</button>
-          <button class="btn btn-danger " onclick="deleteSinglePost()">${post.id}</button>
+          <button class="btn btn-primary px-4" onclick="viewSinglePost(${post.id})">VIEW</button>
+          <button class="btn btn-outline-success " onclick="updateSinglePost(${post.id})">UPDATE</button>
+          <button class="btn btn-danger " onclick="deleteSinglePost(${post.id})">DELETE</button>
        </div>
      </div>
    </div>
