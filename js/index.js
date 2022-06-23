@@ -19,7 +19,7 @@ function getPosts () {
 getPosts()
 
 
-function viewSinglePost(id) {
+function view(id) {
 
   fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
      .then(response => response.json())
@@ -77,7 +77,7 @@ function createPost(e) {
 }
 
 
-  function updateSinglePost(id) {
+  function update(id) {
     let singlePost = {}
     postsDB.forEach(post => {
       if(post.id === id) {
@@ -147,7 +147,7 @@ function createPost(e) {
 
   // delete posts function similar to a delete operation, the D in CRUD
 
-  function deleteSinglePost(id) {
+  function deletePost(id) {
         fetch('https://jsonplaceholder.typicode.com/posts/${id}', {
           method: 'DELETE',
         })
@@ -174,9 +174,9 @@ function renderPosts(arr) {
             </p>
         </div>
         <div class=" d-flex justify-content-between">
-          <button class="btn btn-primary px-4 border-0" onclick="viewSinglePost(${post.id})">VIEW</button>
-          <button class="btn btn-outline-success" onclick="updateSinglePost(${post.id})">UPDATE</button>
-          <button class="btn btn-danger border-0 " onclick="deleteSinglePost(${post.id})">DELETE</button>
+          <button class="btn btn-primary px-4 border-0" onclick="view(${post.id})">VIEW</button>
+          <button class="btn btn-outline-success" onclick="update(${post.id})">UPDATE</button>
+          <button class="btn btn-danger border-0 " onclick="deletePost(${post.id})">DELETE</button>
        </div>
      </div>
    </div>
